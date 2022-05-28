@@ -22,22 +22,18 @@ def test_images(browser):
   image1 = dynamic_content.get_image_one()
   image2 = dynamic_content.get_image_two()
   image3 = dynamic_content.get_image_three()
-  
-  image1_text = image1.get_attribute('src')
-  image2_text = image2.get_attribute('src')
-  image3_text = image3.get_attribute('src')
-  
-  print(f"src 1: {image1_text}")
-  print(f"src 2: {image2_text}")
-  print(f"src 3: {image3_text}")
+    
+  print(f"src 1: {image1}")
+  print(f"src 2: {image2}")
+  print(f"src 3: {image3}")
 
-  if image1_text == punisher:
+  if image1 == punisher:
     print(f"Punisher is image1")
     punisher_exists = True
-  if image2_text == punisher:
+  if image2 == punisher:
     print(f"Punisher is image2")
     punisher_exists = True
-  if image3_text == punisher:
+  if image3 == punisher:
     print(f"Punisher is image3")
     punisher_exists = True
   if not punisher_exists:     

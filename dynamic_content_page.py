@@ -1,5 +1,6 @@
 import pytest
 from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By
 
 class DynamicContentPage:
     URL = 'https://the-internet.herokuapp.com/dynamic_content'
@@ -18,19 +19,19 @@ class DynamicContentPage:
         self.browser.get(self.URL)
     
     def get_paragraph_one_text(self):
-        return self.browser.find_element_by_css_selector(self.paragraph_one_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.paragraph_one_css_selector).text
     
     def get_paragraph_two_text(self):
-        return self.browser.find_element_by_css_selector(self.paragraph_two_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.paragraph_two_css_selector).text
 
     def get_paragraph_three_text(self):
-        return self.browser.find_element_by_css_selector(self.paragraph_three_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.paragraph_three_css_selector).text
 
     def get_image_one(self):
-        return self.browser.find_element_by_css_selector(self.image_one_css_selector)
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_one_css_selector).text
         
     def get_image_two(self):
-        return self.browser.find_element_by_css_selector(self.image_two_css_selector)
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_two_css_selector).text
 
     def get_image_three(self):
-        return self.browser.find_element_by_css_selector(self.image_three_css_selector)
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_three_css_selector).text
