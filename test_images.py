@@ -23,7 +23,7 @@ def test_images(browser):
   image2 = dynamic_content.get_image_two()
   image3 = dynamic_content.get_image_three()
     
-  print(f"src 1: {image1}")
+  print(f"\nsrc 1: {image1}")
   print(f"src 2: {image2}")
   print(f"src 3: {image3}")
 
