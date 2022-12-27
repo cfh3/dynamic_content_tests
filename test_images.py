@@ -10,8 +10,8 @@ def browser():
   driver.quit()
 
 def test_images(browser):
-  punisher = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-3.jpg'
-  punisher_exists = False
+  storm_trooper = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg'
+  storm_trooper_exists = False
 
   dynamic_content = DynamicContentPage(browser)
   dynamic_content.load()
@@ -27,16 +27,16 @@ def test_images(browser):
   print(f"src 2: {image2}")
   print(f"src 3: {image3}")
 
-  if image1 == punisher:
-    print(f"Punisher is image1")
-    punisher_exists = True
-  if image2 == punisher:
-    print(f"Punisher is image2")
-    punisher_exists = True
-  if image3 == punisher:
-    print(f"Punisher is image3")
-    punisher_exists = True
-  if not punisher_exists:     
-    print("Punisher is NOT present")
+  if image1 == storm_trooper:
+    print(f"storm_trooper is image1")
+    storm_trooper_exists = True
+  if image2 == storm_trooper:
+    print(f"storm trooper is image2")
+    storm_trooper_exists = True
+  if image3 == storm_trooper:
+    print(f"storm trooper is image3")
+    storm_trooper_exists = True
+  if not storm_trooper_exists:     
+    print("storm trooper is NOT present")
 
-  assert not punisher_exists, "FAIL: punisher image exists"
+  assert not storm_trooper_exists, "FAIL: storm trooper image exists"

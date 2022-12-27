@@ -1,6 +1,7 @@
 import pytest
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+import time
 
 class DynamicContentPage:
     URL = 'https://the-internet.herokuapp.com/dynamic_content'
@@ -28,10 +29,10 @@ class DynamicContentPage:
         return self.browser.find_element(By.CSS_SELECTOR, self.paragraph_three_css_selector).text
 
     def get_image_one(self):
-        return self.browser.find_element(By.CSS_SELECTOR, self.image_one_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_one_css_selector).get_attribute("src")
         
     def get_image_two(self):
-        return self.browser.find_element(By.CSS_SELECTOR, self.image_two_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_two_css_selector).get_attribute("src")
 
     def get_image_three(self):
-        return self.browser.find_element(By.CSS_SELECTOR, self.image_three_css_selector).text
+        return self.browser.find_element(By.CSS_SELECTOR, self.image_three_css_selector).get_attribute("src")

@@ -9,6 +9,8 @@ selenium = "*"
 pylint = "*"
 
 [packages]
+pytest = "*"
+selenium = "*"
 
 [requires]
 python_version = "3.7"
